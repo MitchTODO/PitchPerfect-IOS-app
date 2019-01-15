@@ -67,12 +67,20 @@ class PlaySoundsViewController: UIViewController {
     // setupAudio
     override func viewDidLoad() {
         super.viewDidLoad()
+        slowButton.imageView?.contentMode = .scaleAspectFit
+        fastButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        highButton.imageView?.contentMode = .scaleAspectFit
+        lowButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
         setupAudio()
     }
     
     // MARK: viewWillAppear
     // stopped button is disabled on start of page
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureUI(.notPlaying)
     }
     
