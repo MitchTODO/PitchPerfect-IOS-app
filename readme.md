@@ -22,9 +22,9 @@ All UI elements use constraints that aid element into positioning whether being 
 
 #### Actions, Outlets and labels
 
-The first scene (RecordSoundsViewController.swift) contains two IBActions, one for starting (recordAudio) and one for stopping the recording (stopRecording). When the first scene loads, the Stop Recording button is disabled by viewDidload, preventing the second scene loading without a audio file.
+The first scene (RecordSoundsViewController.swift) contains one IBActions, controlling the starting and stopping of the audio recording. When the first scene loads, the Stop Recording button is disabled by viewDidload, preventing the second scene loading without a audio file.
 
-When the recordAudio button is pressed a IBAction function is executed and will start the recording as well as saving the audio file (recordedVoice.wav). Also switching the label (recordLabel) from "Tap to record" to "Recording in Progress...". Recorded audio button's IBAction function enables the "stopRecordingButton" through its IBOutlet. When stopRecordingButton is pressed a delegate (url) is passed as a seque to the second view controller "PlaySoundsViewController".
+RecordAudio IBAction function contains a switch case that identifies what button is pressed by the button tag. When case one is true (record button was pressed), the recording will start and it will be saved (recordedVoice.wav). Also switching the label (recordLabel) from "Tap to record" to "Recording in Progress...". When case two is true (stop the recording was pressed), a delegate (url) is passed as a seque to the second view controller "PlaySoundsViewController".
 
 Play Sounds View Controller contains seven IBOutlet that connect to the seven buttons in the view. Each sound effect button is linked to a single IBAction function that uses a switch case to correctly match the button to its sound effect. The stop button is linked to its own IBAction that will stop the play back.
 
@@ -89,7 +89,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 First clone the git repo.
 
-    git clone  https://github.com/MitchTODO/PitchPerfect-IOS-app.git
+    https://github.com/MitchTODO/PitchPerfect-IOS-app.git
 
 Second extract the xcodeproject zip
 
