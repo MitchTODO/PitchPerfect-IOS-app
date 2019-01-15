@@ -89,7 +89,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 First clone the git repo.
 
-    https://github.com/MitchTODO/PitchPerfect-IOS-app.git
+  git clone  https://github.com/MitchTODO/PitchPerfect-IOS-app.git
 
 Second extract the xcodeproject zip
 
